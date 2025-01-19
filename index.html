@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Page Title</title>
+</head>
+
+
+<style>
+    * {
+        font-family: Arial, sans-serif;
+
+    }
+
+    .tab-container {
+        overflow: hidden;
+        
+        white-space: nowrap;
+        
+
+        padding: 10px 0;
+       
+        cursor: grab;
+        
+    }
+
+    .tablinks {
+        display: inline-block;
+        padding: 10px 27px;
+        margin: 0 5px;
+      
+        border: 1px solid #ced6e3;
+        background-color: #ced6e3;
+        text-align: left;
+        border-radius: 30px;
+        font-size: 14px;
+       
+        user-select: none;
+    }
+
+    .tablinks h1 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .tablinks p {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .tablinks:hover {
+        background-color: #ddd;
+    }
+
+    .tablinks:active {
+        color: #ffffff;
+        background-color: #000000;
+
+    }
+
+    .btn_arrow1 {
+        position: absolute;
+        right: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn_arrow i {
+        font-size: 14px;
+    }
+
+    .containerT {
+        position: relative;
+        padding: 10px;
+    }
+
+    .bigP2 {
+        position: relative;
+        padding: 10px;
+
+    }
+
+    .btn_arrow2 {
+        position: absolute;
+        right: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #000000;
+        color: white;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .P2 {
+        overflow: hidden;
+        white-space: nowrap;
+
+        padding: 10px 0;
+        cursor: grab;
+
+    }
+
+
+
+    .p2 {
+        display: inline-block;
+        width: 300px;
+        height: 350px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-family: Arial, sans-serif;
+        margin-right: 10px;
+        
+    }
+
+
+    .p2 img {
+        width: 300px;
+        height: 170px;
+        margin-bottom: -25px;
+    }
+
+  
+
+    .content{
+        margin-left: 5px;
+        word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    }
+
+
+    .content h3 {
+        margin-top: 25px;
+        margin-bottom: -5px;
+       
+
+    }
+
+    .content .p2_p {
+        color: #808080;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .p2 .starts {
+        font-size: 30px;
+        color: gold;
+
+    }
+
+    .starnum {
+        color: #7e4108;
+        font-weight: bold;
+
+    }
+
+    .p2_d {
+
+        margin-bottom: -10px;
+    }
+
+    .price {
+        color: #000000;
+        font-weight: bold;
+
+
+    }
+
+    .p2_b {
+        color: #808080;
+
+    }
+
+    .addinfo {
+        font-weight: bold;
+        color: #000000;
+        border:none;
+        width: fit-content;
+        
+        padding: 10px;
+        margin: 10px;
+        
+        background-color: #b5c166;
+        margin-top: -6px;
+    }
+
+
+    .p2_d i {
+        color: #B8860B;
+
+    }
+
+    .btn1 {
+        margin-top: 50px;
+        font-weight: bold;
+        background-color: white;
+
+        color: black;
+
+        padding: 10px 15px;
+
+        border: 1px solid rgb(72, 71, 71);
+
+        border-radius: 0;
+
+        cursor: pointer;
+
+
+    }
+</style>
+<div class="containerT">
+    <div class="tab-container" id="tabContainer">
+        <div class="tablinks" onclick="showContent(1)">
+            <h1>Web Development</h1>
+            <p>13.3M+ learners</p>
+        </div>
+        <div class="tablinks" onclick="showContent(2)">
+            <h1>JavaScript</h1>
+            <p>17.7M+ learners</p>
+        </div>
+        <div class="tablinks" onclick="showContent(3)">
+            <h1>React JS</h1>
+            <p>7M+ learners</p>
+        </div>
+        <div class="tablinks" onclick="showContent(4)">
+            <h1>Angular</h1>
+            <p>4M+ learners</p>
+        </div>
+        <div class="tablinks" onclick="showContent(5)">
+            <h1>Java</h1>
+            <p>15.5M+ learners</p>
+        </div>
+        <div class="tablinks" onclick="showContent(6)">
+            <h1>Android Development</h1>
+            <p>8M+ learners</p>
+        </div>
+        <div class="tablinks" onclick="showContent(7)">
+            <h1>iOS Development</h1>
+            <p>4M+ learners</p>
+        </div>
+        <div class="tablinks" onclick="showContent(8)">
+            <h1>CSS</h1>
+            <p>13.3M+ learners</p>
+        </div>
+        <div class="tablinks" onclick="showContent(9)">
+            <h1>Python</h1>
+            <p>20M+ learners</p>
+        </div>
+
+    </div>
+    <button class="btn_arrow1"><i class="fa-solid fa-chevron-right"></i> </button>
+</div>
+
+<div class="bigP2">
+    <div class="P2">
+
+        <div class="p2">
+            <img src="img.jpg" alt="Hình ảnh">
+            <div class="content">
+                <h3>The Complete 2024 Web Development Bootcamp</h3>
+                <p class="p2_p"> Dr. Angela Yu, Developer and Lead...</p>
+
+                <div class="p2_d">
+                    <span class="starnum">4.7</span>
+
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+
+                    <span class="p2_b"> (409,451) </span>
+                </div>
+                <p class="price"> ₫1,699,000 </p>
+                <p class="addinfo">Bestseller</p>
+            </div>
+        </div>
+        
+        
+        <div class="p2">
+            <img src="imgreg6_2.jpg" alt="Hình ảnh">
+            <div class="content">
+                <h3>The Web Developer Bootcamp 2024</h3>
+                <p class="p2_p">Colt Steele</p>
+
+                <div class="p2_d">
+                    <span class="starnum">4.7</span>
+
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+
+                    <span class="p2_b"> (49,451) </span>
+                </div>
+                <p class="price"> ₫2,399,000 </p>
+
+            </div>
+
+
+        </div>
+        <div class="p2">
+            <img src="imgreg6_1" alt="Hình ảnh">
+            <div class="content">
+                <h3>Web Development Masterclass - Online Certification Course</h3>
+                <p class="p2_p">YouAccel Training</p>
+
+                <div class="p2_d">
+                    <span class="starnum">4.7</span>
+
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+
+                    <span class="p2_b"> (231,451) </span>
+                </div>
+                <p class="price"> ₫1,499,000 </p>
+
+            </div>
+
+
+        </div>
+        <div class="p2">
+            <img src="imgreg6_4.jpg" alt="Hình ảnh">
+            <div class="content">
+                <h3>Practical Web Development: 22 Courses in 1</h3>
+                <p class="p2_p"> Creative Online School</p>
+
+                <div class="p2_d">
+                    <span class="starnum">4.7</span>
+
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+
+                    <span class="p2_b"> (79,451) </span>
+                </div>
+                <p class="price"> ₫449,000 </p>
+
+            </div>
+
+
+        </div>
+        <div class="p2">
+            <img src="imgreg6_3.avif" alt="Hình ảnh">
+            <div class="content">
+                <h3>Advanced Python Programming: Complete Bootcamp 2024</h3>
+                <p class="p2_p">John Doe Academy</p>
+        
+                <div class="p2_d">
+                    <span class="starnum">4.8</span>
+                    
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    
+                    <span class="p2_b"> (40,215) </span>
+                </div>
+                <p class="price"> ₫2,199,000 </p>
+                <p class="addinfo">New Release</p>
+            </div>
+        </div>
+        
+    </div>
+    <button class="btn_arrow2">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+<button class="btn1">Show all Wed Development courses</button>
+
+</body>
+<script>
+ function setActiveTab(tabElement) {
+            const tabs = document.querySelectorAll(".tablinks");
+            tabs.forEach(tab => tab.classList.remove("active"));
+
+            tabElement.classList.add("active");
+        }
+</script>
+
+
+</html>
